@@ -1,0 +1,42 @@
+@use 'sass:math';
+@use './../globals/variables' as v;
+@use './../util/functions' as f;
+
+@mixin adaptive_font($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $addMobSize: $addSize + $addSize * 0.7;
+
+  @media (max-width: f.em(767)) {
+    font-size: calc(#{ f.rem($mobSize) } + #{ $addMobSize } * ((100vw - 150px) / #{ v.$maxWidth }));
+  }
+
+  @media (min-width: f.em(767)) {
+    font-size: calc(#{f.rem($mobSize)} + #{$addSize} * (100vw / #{v.$maxWidth}));
+  }
+
+}
+
+@mixin adaptive_size($pcSize, $mobSize, $prop) {
+  $addSize: $pcSize - $mobSize;
+  $addMobSize: $addSize + $addSize * 0.7;
+
+  //@media (max-width: f.em(767)) {
+    #{$prop}: calc(#{ f.rem($mobSize) } + #{ $addMobSize } * ((100vw - 150px) / #{ v.$maxWidth }));
+  //}
+
+  @media (min-width: f.em(767)) {
+    #{$prop}: calc(#{f.rem($mobSize)} + #{$addSize} * (100vw / #{v.$maxWidth}));
+  }
+
+}
+
+@mixin spread-map($map: ()) {
+  @each $key, $value in $map {
+    #{$key}: $value;
+  }
+}
+
+@mixin transition($time: v.$transition, $type: ease-in-out) {
+    transition: #{$time + ms} $type;
+}
+

@@ -1,0 +1,18 @@
+@use 'colors' as *;
+
+$fontSize: 16;
+$maxWidth: 3840;
+$transition: 250;
+
+$--background-header: --background-header;
+$--background-main: --background-main;
+
+$theme-map-light: (
+        $--background-header: $white-tp-6,
+        $--background-main: $green-200
+);
+
+$theme-map-dark: (
+        $--background-header: $white-tp-6,
+        $--background-main: $green-200,
+);

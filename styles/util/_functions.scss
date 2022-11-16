@@ -1,0 +1,29 @@
+@use 'sass:math';
+@use './../globals/variables' as *;
+
+@function rem($pixels) {
+  @if (math.is-unitless($pixels)) {
+    @return math.div($pixels, 16) + rem;
+  } @else {
+    @error "Need unitless number";
+  }
+}
+
+@function em($pixels) {
+  @if (math.is-unitless($pixels)) {
+    @return math.div($pixels, 16) + em;
+  } @else {
+    @error "Need unitless number";
+  }
+}
+
+@function theme-var($key, $fallback: null, $map: $theme-map-light) {
+  @if not map-has-key($map, $key) {
+    @error "key: '#{$key}', is not a key in map: #{$map}";
+  }
+  @if ($fallback) {
+    @return var($key, $fallback);
+  } @else {
+    @return var($key);
+  }
+}

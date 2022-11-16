@@ -3,7 +3,6 @@
   "extends": [
     "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended",
-    "plugin:tailwind/recommended",
     "plugin:prettier/recommended"
   ],
   "plugins": [
