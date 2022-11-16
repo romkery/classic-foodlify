@@ -1,5 +1,5 @@
-import React, { useRef, useState } from "react";
-import Icon from "@mdi/react";
+import React, { useRef, useState } from 'react';
+import Icon from '@mdi/react';
 import {
   mdiAccount,
   mdiAirplane,
@@ -7,9 +7,9 @@ import {
   mdiGithub,
   mdiMagnify,
   mdiMenu,
-  mdiWeatherSunset
-} from "@mdi/js";
-import ThemeSwitch from "@components/styled/ThemeSwitch";
+  mdiWeatherSunset,
+} from '@mdi/js';
+import ThemeSwitch from '@components/styled/ThemeSwitch';
 
 const tabs = ['Home', 'Recipes', 'Ingredients', 'Drink', 'Liked'];
 
@@ -53,10 +53,10 @@ const Header = () => {
         </div>
         <div className="navbar__right">
           <div className="navbar__right__search">
-            <Icon path={mdiMagnify}/>
+            <Icon path={mdiMagnify} />
             <p>Search</p>
             <div className="navbar__right__search_keycap">
-              <Icon path={mdiAppleKeyboardCommand}/>
+              <Icon path={mdiAppleKeyboardCommand} />
               <span>K</span>
             </div>
           </div>
@@ -83,11 +83,11 @@ const Header = () => {
           </div>
           <div className="nav-screen__social">
             <Icon path={mdiAccount} />
-            <Icon path={mdiGithub}  />
-            <Icon path={mdiAirplane}  />
+            <Icon path={mdiGithub} />
+            <Icon path={mdiAirplane} />
           </div>
         </div>
-        </div>
+      </div>
     </header>
   );
 };

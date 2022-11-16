@@ -1,6 +1,6 @@
-import type { AppProps } from "next/app";
-import Header from "@components/Header/Header";
-import "../styles/styles.scss";
+import type { AppProps } from 'next/app';
+import Header from '@components/Header/Header';
+import '../styles/styles.scss';
 
 export default function App({ Component, pageProps }: AppProps) {
   const tabs = ['Home', 'Recipes', 'Ingredients', 'Drink', 'Liked'];
