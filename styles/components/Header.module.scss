@@ -17,26 +17,14 @@ header {
     backdrop-filter: blur(rem(10));
 
     &__left {
-      $self: &;
       display: flex;
       align-items: center;
       padding-right: rem(2);
       margin-left: rem(10);
       gap: rem(20);
 
-      @include breakpoint-down(md) {
-        #{$self}_tabs {
-          display: none;
-        }
-      }
-
-
       &_logo {
         cursor: pointer;
-
-        img {
-
-        }
 
         p {
           padding-bottom: rem(5);
@@ -49,6 +37,10 @@ header {
       &_tabs {
         display: flex;
         gap: rem(30);
+
+        @include breakpoint-down(md) {
+            display: none;
+        }
 
         a {
           @include transition();
@@ -78,7 +70,6 @@ header {
       }
 
       &__search {
-        $self: &;
         display: flex;
         align-items: center;
         padding: rem(4) rem(5);
@@ -91,9 +82,6 @@ header {
         @include breakpoint-down(md) {
           background: none;
           border: none;
-          #{$self}_keycap {
-            display: none;
-          }
 
           &:hover {
             background: none !important;
@@ -129,6 +117,10 @@ header {
           border: solid rem(1) $blue-500;
           border-radius: rem(8);
           gap: rem(2);
+
+          @include breakpoint-down(md) {
+            display: none;
+          }
 
           svg {
             width: rem(15);
