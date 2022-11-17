@@ -1,0 +1,52 @@
+@use '../util' as *;
+@use '../globals/colors' as *;
+
+
+.home-container {
+  width: 100%;
+  height: 100%;
+
+  .home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+
+      img {
+        width: rem(300);
+        height: rem(150);
+
+        @include breakpoint-down(md) {
+          width: rem(150);
+          height: rem(75);
+        }
+      }
+
+      span {
+        background: linear-gradient(180.81deg, #BFE897 15.35%, #91da71 58.38%, #6cbe45 84.21%);
+        webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        @include adaptive_font(100, 30);
+      }
+
+      h1 {
+        margin: 0;
+        @include adaptive_font(100, 30);
+        text-align: center;
+      }
+
+      p {
+        @include adaptive_font(40, 16);
+        line-height: 2.5;
+        color: $blue-500-tp-4;
+      }
+    }
+  }
+}
