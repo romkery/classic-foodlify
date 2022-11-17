@@ -173,7 +173,7 @@ header {
     background: $green-0;
     opacity: 0;
     overflow-y: auto;
-    @include transition();
+    @include transition(opacity);
 
     @include breakpoint(md) {
       display: none;

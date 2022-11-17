@@ -15,13 +15,13 @@ const Header = () => {
       setIsShowNavScreen(true);
       body.style.overflowY = 'scroll';
       body.style.position = 'fixed';
-      navScreen.current!.style.zIndex = '9999';
+      navScreen.current!.style.height = '100%';
       navScreen.current!.style.opacity = '1';
     } else {
       setIsShowNavScreen(false);
       body.style.overflowY = 'auto';
       body.style.position = 'static';
-      navScreen.current!.style.zIndex = '-9999';
+      navScreen.current!.style.height = '0%';
       navScreen.current!.style.opacity = '0';
     }
   };
