@@ -8,11 +8,6 @@ html {
   height: 100%;
   margin: 0;
 }
-
-*{
-  @include transition();
-}
-
 svg {
   width: rem(20);
 }

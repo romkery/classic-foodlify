@@ -40,6 +40,8 @@ header {
         a {
           padding: rem(16) 0;
 
+          @include transition(color);
+
           &:hover {
             color: $green-650;
           }
@@ -49,8 +51,8 @@ header {
 
     &__right {
       display: flex;
-      gap: rem(20);
       align-items: center;
+      gap: rem(20);
 
       @include breakpoint-down(md) {
         gap: rem(0) !important;
@@ -68,10 +70,12 @@ header {
         border: solid rem(1) $green-500;
         border-radius: rem(10);
         cursor: pointer;
+        @include transition();
 
         @include breakpoint-down(md) {
           background: none;
           border: none;
+
 
           &:hover {
             background: none !important;
@@ -86,6 +90,7 @@ header {
 
         p {
           width: rem(65);
+          @include transition();
 
           @include breakpoint-down(lg) {
             width: 0;
@@ -121,15 +126,16 @@ header {
         border: rem(1) solid $green-500;
         border-radius: rem(10);
         cursor: pointer;
+        @include transition();
+        @include breakpoint-down(md) {
+          display: none;
+        }
 
         &:hover {
           background: $green-150;
           border-color: $green-800;
         }
 
-        @include breakpoint-down(md) {
-          display: none;
-        }
       }
 
       &_menu-btn {
@@ -137,16 +143,17 @@ header {
         padding-top: rem(4);
         cursor: pointer;
         color: $blue-500;
+        @include transition();
         @include breakpoint-down(md) {
           display: block;
         }
       }
 
       &_theme-btn {
-        cursor: pointer;
-        color: $green-800;
         width: rem(20);
         height: rem(20);
+        cursor: pointer;
+        color: $green-800;
 
         @include breakpoint-down(md) {
           display: none;
@@ -157,6 +164,7 @@ header {
 
   .nav-screen-container {
     position: fixed;
+    top: rem(49);
     display: flex;
     z-index: -9999;
     justify-content: center;
@@ -165,6 +173,7 @@ header {
     background: $green-0;
     opacity: 0;
     overflow-y: auto;
+    @include transition();
 
     @include breakpoint(md) {
       display: none;
@@ -186,6 +195,7 @@ header {
           border-bottom: rem(1) solid $blue-500-tp-2;
           cursor: pointer;
           font-size: 0.9rem;
+          @include transition();
 
           &:hover {
             color: $green-650;
@@ -216,6 +226,7 @@ header {
           width: rem(35);
           cursor: pointer;
           opacity: .5;
+          @include transition();
 
           &:hover {
             opacity: 1;
