@@ -9,6 +9,15 @@ html {
   margin: 0;
 }
 
+*{
+  @include transition();
+}
+
+svg {
+  width: rem(20);
+}
+
+
 body {
   padding: 0;
   margin: 0;

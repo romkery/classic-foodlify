@@ -39,7 +39,7 @@ const ThemeSwitch = styled((props: SwitchProps) => (
         backgroundColor:
           theme.palette.mode === 'dark' ? 'rgb(47,47,47)' : 'rgb(47,47,47)',
         opacity: 1,
-        border: '1px solid rgba(255,255,255, .8)',
+        border: '1px solid rgba(255,255,255, .2)',
       },
       '&.Mui-disabled + .MuiSwitch-track': {
         opacity: 0.5,
@@ -82,7 +82,7 @@ const ThemeSwitch = styled((props: SwitchProps) => (
     },
   },
   '& .MuiSwitch-track': {
-    border: '1px solid rgba(0,0,0, .5)',
+    border: '1px solid rgba(0,0,0, .2)',
     padding: 0,
     borderRadius: 22 / 2,
     backgroundColor:
