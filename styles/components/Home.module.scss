@@ -11,7 +11,7 @@
     flex-direction: column;
     align-items: center;
 
-    &__hero {
+    .hero {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -29,9 +29,9 @@
 
       span {
         background: linear-gradient(180.81deg, #BFE897 15.35%, #91da71 58.38%, #6cbe45 84.21%);
+        background-clip: text;
         webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        background-clip: text;
         text-fill-color: transparent;
         @include adaptive_font(100, 30);
       }
@@ -44,8 +44,97 @@
 
       p {
         @include adaptive_font(40, 16);
-        line-height: 2.5;
         color: $blue-500-tp-4;
+        line-height: 2.5;
+      }
+    }
+
+    .announcement-grid-layout-container {
+      padding: 0 rem(20);
+
+      .announcement-grid-layout {
+        display: grid;
+        grid-gap: rem(20);
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        width: 100%;
+        height: rem(710);
+        max-width: rem(1200);
+
+        @include breakpoint-down(xl) {
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: rem(400) 0 rem(400) 0 rem(284) 0 rem(284) 0;
+          max-width: rem(768);
+        }
+
+        @include breakpoint-down(sm) {
+          grid-template-columns: 1fr;
+          grid-template-rows: rem(200) rem(250) rem(300)  rem(150) rem(200);
+          max-width: rem(768);
+        }
+
+        & > * {
+          box-shadow: rem(0) rem(6) rem(10) rgba(0, 0, 0, 0.25);
+          border: rem(1) solid rgba(0, 0, 0, 0.1);
+          border-radius: rem(5);
+        }
+
+        &__taste {
+          grid-area: 1 / 1 / 3 / 2;
+          @include breakpoint-down(xl) {
+            grid-area: 3 / 1 / 5 / 2;
+          }
+
+          @include  breakpoint-down(sm) {
+            grid-area: unset;
+            grid-row: 2;
+          }
+        }
+
+        &__receipt {
+          grid-area: 1 / 2 / 3 / 4;
+          @include breakpoint-down(xl) {
+            grid-area: 1 / 1 / 3 / 3;
+          }
+
+          @include  breakpoint-down(sm) {
+            grid-area: unset;
+            grid-row: 1;
+          }
+        }
+
+        &__wine {
+          grid-area: 1 / 4 / 5 / 5;
+          @include breakpoint-down(xl) {
+            grid-area: 3 / 2 / 7 / 3;
+          }
+
+          @include  breakpoint-down(sm) {
+            grid-area: unset;
+          }
+        }
+
+        &__fact {
+          grid-area: 3 / 1 / 5 / 3;
+          @include breakpoint-down(xl) {
+            grid-area: 7 / 1 / 9 / 3;
+          }
+
+          @include  breakpoint-down(sm) {
+            grid-area: unset;
+          }
+        }
+
+        &__advice {
+          grid-area: 3 / 3 / 5 / 4;
+          @include breakpoint-down(xl) {
+            grid-area: 5 / 1 / 7 / 2;
+          }
+
+          @include  breakpoint-down(sm) {
+            grid-area: unset;
+          }
+        }
       }
     }
   }
