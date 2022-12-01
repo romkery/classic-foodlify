@@ -1,5 +1,6 @@
 import React from 'react';
 import Taste from '@components/Home/AnnouncementGridLayout/Taste';
+import Receipt from '@components/Home/AnnouncementGridLayout/Receipt';
 
 const Home = () => {
   return (
@@ -16,7 +17,7 @@ const Home = () => {
         <div className="announcement-grid-layout-container">
           <div className="announcement-grid-layout">
             <Taste />
-            <div className="announcement-grid-layout__receipt">receipt</div>
+            <Receipt />
             <div className="announcement-grid-layout__wine">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam
               aspernatur atque cum eligendi eos eum, fugit magni modi neque

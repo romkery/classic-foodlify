@@ -69,7 +69,7 @@
 
         @include breakpoint-down(sm) {
           grid-template-columns: 1fr;
-          grid-template-rows: rem(200) rem(350) rem(300)  rem(150) rem(200);
+          grid-template-rows: rem(360) rem(360) rem(300)  rem(150) rem(200);
           max-width: rem(768);
         }
 
@@ -106,7 +106,7 @@
               cursor: pointer;
 
               @include breakpoint-down(sm) {
-               height: rem(150);
+                height: rem(150);
               }
             }
 
@@ -149,6 +149,48 @@
 
         &__receipt {
           grid-area: 1 / 2 / 3 / 4;
+
+          .container {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            img {
+              width: 100%;
+              object-fit: cover;
+
+              @include breakpoint-down(md) {
+                max-height: rem(250);
+              }
+            }
+
+            .receipt-info {
+              width: 100%;
+              height: 100%;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              gap: rem(10);
+
+              p {
+                font-size: rem(30);
+              }
+
+              &__time {
+                display: flex;
+                align-items: center;
+                border-radius: rem(15);
+                border: rem(1) solid $blue-500;
+                padding: rem(5);
+                gap: rem(4);
+
+              }
+            }
+          }
+
           @include breakpoint-down(xl) {
             grid-area: 1 / 1 / 3 / 3;
           }
