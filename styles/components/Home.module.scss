@@ -149,6 +149,8 @@
 
         &__receipt {
           grid-area: 1 / 2 / 3 / 4;
+          transform: perspective(500px) rotateX(0deg) rotateY(0deg);
+          //transition: 800ms ease-in-out;
 
           .container {
             height: 100%;
