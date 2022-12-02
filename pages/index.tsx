@@ -1,5 +1,7 @@
 import App from './_app';
 
-export default function Home() {
+const index = () => {
   return App;
-}
+};
+
+export default index;

@@ -8,7 +8,14 @@ import {
   mdiWeatherSunny,
 } from '@mdi/js';
 
-const Header = (props: any) => {
+interface IProps {
+  toggleNavScreen: () => void;
+  isDark: boolean;
+  isShowNavScreen: boolean;
+  tabs: string[];
+}
+
+const Navbar = (props: IProps) => {
   return (
     <div className="navbar">
       <div className="navbar__left">
@@ -59,4 +66,4 @@ const Header = (props: any) => {
   );
 };
 
-export default Header;
+export default Navbar;

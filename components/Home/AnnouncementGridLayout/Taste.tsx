@@ -11,7 +11,7 @@ const Taste = () => {
   const getTasteLayout = () => {
     return (
       <>
-        {mockTasteData.map((type: any) => {
+        {mockTasteData.map((type: { title: string; value: number }) => {
           const rate =
             Math.ceil(type.value / 16.6) > 6 ? 6 : Math.ceil(type.value / 16.6);
 

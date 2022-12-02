@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { MutableRefObject } from 'react';
 import Icon from '@mdi/react';
 import { mdiAccount, mdiGithub, mdiSendCircleOutline } from '@mdi/js';
 import ThemeSwitch from '@components/styled/ThemeSwitch';
 
-const Header = (props: any) => {
+interface IProps {
+  tabs: string[];
+  navScreen: MutableRefObject<HTMLDivElement>;
+}
+
+const NavScreen = (props: IProps) => {
   return (
     <div className="nav-screen-container" ref={props.navScreen}>
       <div className="nav-screen">
@@ -36,4 +41,4 @@ const Header = (props: any) => {
   );
 };
 
-export default Header;
+export default NavScreen;
