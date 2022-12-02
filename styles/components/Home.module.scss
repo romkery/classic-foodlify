@@ -48,7 +48,7 @@
     }
 
     .announcement-grid-layout-container {
-      padding: 0 rem(20);
+      padding: rem(20);
 
       .announcement-grid-layout {
         display: grid;
@@ -67,7 +67,7 @@
 
         @include breakpoint-down(sm) {
           grid-template-columns: 1fr;
-          grid-template-rows: rem(360) rem(360) rem(300)  rem(150) rem(200);
+          grid-template-rows: rem(360) rem(400) rem(300)  rem(150) rem(200);
           max-width: rem(768);
         }
 
@@ -79,7 +79,9 @@
 
         &__taste {
           display: flex;
+
           grid-area: 1 / 1 / 3 / 2;
+          padding: rem(20);
           @include breakpoint-down(xl) {
             grid-area: 3 / 1 / 5 / 2;
           }
@@ -92,52 +94,54 @@
           .container {
             display: flex;
             flex-direction: column;
-            align-items: center;
             width: 100%;
             height: 100%;
-            padding: rem(20);
 
             img {
-              width: rem(250);
+              width: 100%;
               max-height: rem(200);
               border-radius: rem(10);
               cursor: pointer;
 
               @include breakpoint-down(sm) {
-                height: rem(150);
+                height: rem(250);
               }
             }
 
             .rate-container {
               display: flex;
               flex-direction: column;
+              width: 100%;
+              height: 100%;
               margin-top: rem(10);
-              gap: rem(10);
 
               .rate {
                 display: flex;
                 flex-direction: column;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
 
                 p {
-                  padding-bottom: rem(2);
+                  padding-bottom: rem(4);
                 }
-
 
                 &__thumbs {
                   display: flex;
+                  align-items: center;
+                  width: 100%;
+                  height: rem(11);
+                  gap: rem(2);
 
                   &-active {
-                    width: rem(42);
-                    height: rem(11);
-                    background: $green-300;
-                    border-radius: rem(100);
+                    width: 16.6667%;
+                    height: 100%;
+                    background: $green-500;
                   }
 
                   &-inactive {
-                    width: rem(42);
-                    height: rem(11);
-                    background: $blue-500;
-                    border-radius: rem(100);
+                    @extend .rate__thumbs-active;
+                    background: $green-200;
                   }
                 }
               }
@@ -152,17 +156,17 @@
           border-radius: 0;
 
           .container {
-            height: 100%;
-            width: 100%;
             display: flex;
             flex-direction: column;
             align-items: center;
+            width: 100%;
+            height: 100%;
             box-shadow: rem(0) rem(6) rem(10) rgba(0, 0, 0, 0.25);
+            background: transparent;
             border: rem(1) solid rgba(0, 0, 0, 0.1);
             border-radius: rem(5);
             transform: perspective(500px) rotateX(0deg) rotateY(0deg);
-            transition: transform 300ms ease-out, background 2000ms ;
-            background: transparent;
+            transition: transform 300ms ease-out, background 2000ms;
 
             img {
               width: 100%;
@@ -174,12 +178,12 @@
             }
 
             .receipt-info {
-              width: 100%;
-              height: 100%;
               display: flex;
               flex-direction: column;
-              align-items: center;
               justify-content: center;
+              align-items: center;
+              width: 100%;
+              height: 100%;
               gap: rem(10);
 
               p {
@@ -189,9 +193,9 @@
               &__time {
                 display: flex;
                 align-items: center;
-                border-radius: rem(15);
-                border: rem(1) solid $blue-500;
                 padding: rem(5);
+                border: rem(1) solid $blue-500;
+                border-radius: rem(15);
                 gap: rem(4);
 
               }
