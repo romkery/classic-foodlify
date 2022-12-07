@@ -67,7 +67,7 @@
 
         @include breakpoint-down(sm) {
           grid-template-columns: 1fr;
-          grid-template-rows: rem(360) rem(400) rem(500)  rem(250) rem(200);
+          grid-template-rows: rem(360) rem(400) rem(500)  rem(250) rem(250);
           max-width: rem(768);
         }
 
@@ -288,12 +288,28 @@
 
         &__advice {
           grid-area: 3 / 3 / 5 / 4;
+          padding:  0 rem(50);
           @include breakpoint-down(xl) {
             grid-area: 5 / 1 / 7 / 2;
           }
 
           @include breakpoint-down(sm) {
             grid-area: unset;
+          }
+
+          .container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: rem(20);
+
+            img {
+              width: rem(150);
+              height: rem(150);
+            }
           }
         }
       }

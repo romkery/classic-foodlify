@@ -3,6 +3,7 @@ import Taste from '@components/Home/AnnouncementGridLayout/Taste';
 import Receipt from '@components/Home/AnnouncementGridLayout/Receipt';
 import Wine from '@components/Home/AnnouncementGridLayout/Wine';
 import FoodFact from '@components/Home/AnnouncementGridLayout/FoodFact';
+import Advice from '@components/Home/AnnouncementGridLayout/Advice';
 
 const Home = () => {
   return (
@@ -22,7 +23,7 @@ const Home = () => {
             <Receipt />
             <Wine />
             <FoodFact />
-            <div className="announcement-grid-layout__advice">advice</div>
+            <Advice />
           </div>
         </div>
       </div>
