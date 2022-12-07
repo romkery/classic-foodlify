@@ -2,6 +2,7 @@ import React from 'react';
 import Taste from '@components/Home/AnnouncementGridLayout/Taste';
 import Receipt from '@components/Home/AnnouncementGridLayout/Receipt';
 import Wine from '@components/Home/AnnouncementGridLayout/Wine';
+import FoodFact from '@components/Home/AnnouncementGridLayout/FoodFact';
 
 const Home = () => {
   return (
@@ -20,7 +21,7 @@ const Home = () => {
             <Taste />
             <Receipt />
             <Wine />
-            <div className="announcement-grid-layout__fact">fact</div>
+            <FoodFact />
             <div className="announcement-grid-layout__advice">advice</div>
           </div>
         </div>
