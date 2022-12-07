@@ -67,7 +67,7 @@
 
         @include breakpoint-down(sm) {
           grid-template-columns: 1fr;
-          grid-template-rows: rem(360) rem(400) rem(300)  rem(150) rem(200);
+          grid-template-rows: rem(360) rem(400) rem(500)  rem(250) rem(200);
           max-width: rem(768);
         }
 
@@ -213,13 +213,44 @@
         }
 
         &__wine {
+          padding: rem(20);
           grid-area: 1 / 4 / 5 / 5;
+          overflow: hidden;
           @include breakpoint-down(xl) {
             grid-area: 3 / 2 / 7 / 3;
           }
 
           @include breakpoint-down(sm) {
             grid-area: unset;
+          }
+
+          .container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: rem(20);
+
+            img {
+              height: rem(300);
+              width: rem(110);
+
+              @include breakpoint-down(sm) {
+               height: rem(200);
+                width: rem(75);
+              }
+            }
+
+            p {
+              @include adaptive_font(25, 18);
+              text-align: center;
+            }
+            span {
+              font-size: rem(16);
+              color: hsla(208, 37%, 20%, 0.47);
+            }
           }
         }
 
